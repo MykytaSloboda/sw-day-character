@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run ./tests/unit && yarn playwright test"
+    "test": "vitest run ./tests/unit && yarn run playwright test",
+    "test:unit": "vitest run ./tests/unit",
+    "test:e2e": "yarn run playwright test"
   },
   "dependencies": {
     "react": "^18.3.1",

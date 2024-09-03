@@ -31,8 +31,8 @@ jobs:
         run: yarn
       - name: Run ESLint
         run: yarn run lint
-      - name: Run Tests
-        run: yarn run test
+      - name: Run Unit Tests
+        run: yarn run test:unit
       - name: Build
         run: yarn run build
       - name: Setup Pages
