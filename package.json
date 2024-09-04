@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:start": "docker-compose up",
+    "dev:setup": "docker-compose build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run ./tests/unit && yarn run playwright test",
-    "test:unit": "vitest run ./tests/unit",
-    "test:e2e": "yarn run playwright test"
+    "test": "docker-compose run --rm web yarn run vitest run ./tests/unit && docker-compose run --rm web yarn run playwright test",
+    "test:unit": "docker-compose run --rm web yarn run vitest run ./tests/unit",
+    "test:e2e": "docker-compose run --rm web yarn run playwright test"
   },
   "dependencies": {
     "react": "^18.3.1",

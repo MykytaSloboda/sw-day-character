@@ -32,7 +32,11 @@ jobs:
       - name: Run ESLint
         run: yarn run lint
       - name: Run Unit Tests
-        run: yarn run test:unit
+        run: yarn run vitest run ./tests/unit
+      - name: Install Playwright
+        run: yarn playwright install --with-deps
+      - name: Run Playwright tests
+        run: yarn run playwright test
       - name: Build
         run: yarn run build
       - name: Setup Pages
