@@ -7,9 +7,8 @@
 Diese Webanwendung zeigt täglich Informationen über einen zufälligen Charakter aus dem Star Wars Universum an.
 Tatsächlich ist diese Seite die Lösung für die folgende Aufgabe.
 
-```
-Erstelle eine (Frontend-)Anwendung „Star Wars Charakter des Tages“. Verwende dazu die SWAPI. Die React-Anwendung sollte zufällig eine Star Wars-Figur auswählen und ansprechend präsentieren. Ein Benutzer sollte jeden Tag dieselbe Figur als „SWCotD“ sehen. Verschiedene Benutzer/Browser müssen nicht dieselbe Figur am selben Tag sehen.
-```
+Erstelle eine (Frontend-)Anwendung „Star Wars Charakter des Tages“. Verwende dazu die [SWAPI](https://swapi.dev/api/). Die React-Anwendung sollte zufällig eine Star Wars-Figur auswählen und ansprechend präsentieren. Ein Benutzer sollte jeden Tag dieselbe Figur als „SWCotD“ sehen. Verschiedene Benutzer/Browser müssen nicht dieselbe Figur am selben Tag sehen.
+
 
 ## 🧑‍💻 Technologie stack
 
