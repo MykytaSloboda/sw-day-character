@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# ✨ Star Wars Charakter des Tages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🇬🇧/🇺🇸 English Version](README.en.md)
 
-Currently, two official plugins are available:
+[🇩🇪 Deutsche Version](README.md)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Diese Webanwendung zeigt täglich Informationen über einen zufälligen Charakter aus dem Star Wars Universum an.
+Tatsächlich ist diese Seite die Lösung für die folgende Aufgabe.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+Erstelle eine (Frontend-)Anwendung „Star Wars Charakter des Tages“. Verwende dazu die [SWAPI](https://swapi.dev/api/). Die React-Anwendung sollte zufällig eine Star Wars-Figur auswählen und ansprechend präsentieren. Ein Benutzer sollte jeden Tag dieselbe Figur als „SWCotD“ sehen. Verschiedene Benutzer/Browser müssen nicht dieselbe Figur am selben Tag sehen.
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🧑‍💻 Technologie stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Für die Lösung wurde der unten aufgeführte Technologiestack verwendet:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 🎨 Frontend-Entwicklung
+- [React.js](https://react.dev/learn)
+- [Vite](https://vitejs.dev/guide/)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+
+### 🧪 Testing
+- [Vitest](https://vitest.dev/guide/)
+- [Playwright](https://playwright.dev/docs/intro)
+
+### 🏭 DevOPS
+- [Github actions](https://docs.github.com/en/actions/writing-workflows/quickstart)
+- [Docker](https://www.docker.com/get-started/)
+
+## 🛠️ Projekt installation und Start
+1. Klone das Projekt-Repository. ([Anleitungen zum Klonen eines GitHub-Repositorys](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
+2. Stelle sicher, dass Docker installiert und gestartet ist. ([Docker Einrichten](https://www.docker.com/get-started/))
+3. Baue das Projekt, indem du den folgenden Befehl im Terminal ausführst:
+```bash
+  yarn dev:setup
+```
+4. Starte das Projekt lokal im Entwicklungsmodus (lasse das Terminal geöffnet):
+```bash
+yarn dev:start
+```
+5. Öffne ein neues Terminal und führe alle Unit- und End-to-End-Tests aus:
+```bash
+yarn test
 ```
