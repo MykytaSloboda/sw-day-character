@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/sw-day-character/",
+  base: "/hvv-tender-frontend/",
   plugins: [react()],
   preview: {
     port: 3000,
