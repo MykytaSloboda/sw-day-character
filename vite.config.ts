@@ -6,10 +6,11 @@ export default defineConfig({
   base: "/hvv-tender-frontend/",
   plugins: [react()],
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@types': path.resolve(__dirname, './src/shared/types')
-    },
+    alias: [
+      { find: "@", replacement: path.resolve(__dirname, "src") },
+      { find: "@app", replacement: path.resolve(__dirname, "src/app") },
+      { find: "@shared", replacement: path.resolve(__dirname, "src/shared") },
+    ],
   },
   preview: {
     port: 3000,
