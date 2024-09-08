@@ -11,3 +11,7 @@ services:
       - ./src:/app/src
       - ./tests:/app/tests
       - ./vite.config.ts:/app/vite.config.ts
+      - ./public:/app/public
+      - ./index.html:/app/index.html
+      - ./tailwind.config.js:/app/tailwind.config.js
+      - ./playwright.config.ts:/app/playwright.config.ts

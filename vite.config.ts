@@ -10,6 +10,7 @@ export default defineConfig({
       { find: "@", replacement: path.resolve(__dirname, "src") },
       { find: "@app", replacement: path.resolve(__dirname, "src/app") },
       { find: "@shared", replacement: path.resolve(__dirname, "src/shared") },
+      { find: "@pages", replacement: path.resolve(__dirname, "src/pages") }
     ],
   },
   preview: {

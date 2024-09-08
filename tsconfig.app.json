@@ -7,9 +7,10 @@
     "skipLibCheck": true,
 
     "paths": {
-      "@/*": ["/src/*"],
-      "@shared/*": ["/src/shared*"],
-      "@app/*": ["/src/app/*"]
+      "@/*": ["./src/*"],
+      "@shared/*": ["./src/shared*"],
+      "@pages/*": ["./src/pages*"],
+      "@app/*": ["./src/app/*"]
     },
 
     /* Bundler mode */
