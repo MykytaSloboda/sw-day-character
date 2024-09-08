@@ -13,7 +13,7 @@ export const DarkModeToggle = () => {
     }
 
     return (
-        <button className="p-1 border border-line rounded dark:border-lineDark dark:bg-darkBg w-10 h-10" onClick={darkModeHandler} data-test-theme-mode>
+        <button className="p-1 float-right border border-line rounded dark:border-lineDark dark:bg-darkBg w-10 h-10" onClick={darkModeHandler} data-test-theme-mode>
             <img src={!isDark ? lightModeIcon : darkModeIcon} alt={!isDark ? 'chewbacca' : 'darth-vader'} className="w-full h-full" />
         </button>
     );
