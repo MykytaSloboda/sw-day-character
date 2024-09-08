@@ -1,5 +1,8 @@
-import { describe, expect, test, beforeEach } from "vitest";
-import { getFromLocalStorage, setToLocalStorage } from "../../src/app/services";
+import { describe, expect, test, beforeEach, vi, afterEach } from "vitest";
+import { getFromLocalStorage, setToLocalStorage, getFetchedData } from "../../src/app/services";
+
+// Мок fetch
+global.fetch = vi.fn();
 
 describe("localstorage service callbacks", () => {
   beforeEach(() => {
@@ -47,5 +50,33 @@ describe("localstorage service callbacks", () => {
 
       expect(localStorage.getItem(testKey)).toEqual(testValue);
     });
+  });
+});
+
+describe('getFetchedData', () => {
+  const mockData = { key: 'value' };
+
+  afterEach(() => {
+    vi.clearAllMocks();
+  });
+
+  test('should fetch data successfully', async () => {
+    // Mock the global fetch function
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockData,
+    }));
+
+    const url = 'https://example.com';
+    const result = await getFetchedData(url);
+
+    expect(result).toEqual(mockData);
+    expect(fetch).toHaveBeenCalledWith(url, { method: 'GET' });
+  });
+
+  test('should throw error for invalid URL', async () => {
+    const invalidUrl = '    ';
+    
+    await expect(getFetchedData(invalidUrl)).rejects.toThrow();
   });
 });
