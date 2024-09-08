@@ -1,4 +1,4 @@
-import { EErrorMessages} from '@shared/enums';
+import { EErrorMessages } from '@shared/enums';
 
 export const getFromLocalStorage = (key: string) => {
     return localStorage.getItem(key);

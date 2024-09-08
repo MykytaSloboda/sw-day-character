@@ -1,6 +1,5 @@
 import { describe, expect, test, beforeEach } from "vitest";
 import { getFromLocalStorage, setToLocalStorage } from "../../src/app/services";
-import { EErrorMessages } from "../../src/shared/enums";
 
 describe("localstorage service callbacks", () => {
   beforeEach(() => {
