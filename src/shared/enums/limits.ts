@@ -1,3 +1,3 @@
 export enum ELimits {
-    CHARACHTER_LIMIT = 82
+    CHARACTER_LIMIT = 82
 };

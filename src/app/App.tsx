@@ -1,9 +1,8 @@
-import { Header } from "@shared/ui";
+import { BaseLayout } from "@shared/ui";
 
 function App() {
   return (
-    
-    <Header />
+    <BaseLayout>''</BaseLayout>
   );
 }
 
