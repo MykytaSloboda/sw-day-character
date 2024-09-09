@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 3000:3000
+      - 5000:5000
     volumes:
       - ./src:/app/src
       - ./tests:/app/tests
@@ -15,3 +15,4 @@ services:
       - ./index.html:/app/index.html
       - ./tailwind.config.js:/app/tailwind.config.js
       - ./playwright.config.ts:/app/playwright.config.ts
+      - ./package.json:/app/package.json
