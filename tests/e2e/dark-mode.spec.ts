@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 test.describe('DarkModeToggle Component', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('http://127.0.0.1:8080');
+        await page.goto('http://127.0.0.1:3001');
         await page.emulateMedia({ colorScheme: 'light' });
       });
 test('should display light mode icon by default', async ({ page }) => {
