@@ -25,7 +25,7 @@ test:
     paths:
       - test-results/
     reports:
-      junit: test-results/*.xml
+      junit: test-results/*.json
     expire_in: 1 week
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
