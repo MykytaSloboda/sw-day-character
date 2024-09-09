@@ -20,13 +20,6 @@ test:
     - yarn run vitest run ./tests/unit
     - yarn playwright install --with-deps
     - yarn run playwright test
-  artifacts:
-    when: always
-    paths:
-      - test-results/
-    reports:
-      junit: test-results/*.json
-    expire_in: 1 week
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
