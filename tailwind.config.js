@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       colors: {
         darkBg: "#111928",
@@ -12,6 +15,7 @@ export default {
         line: "#eaecf0",
         lineDark: "#374151",
         orangeBg: "#fffcf5",
+        darkOrangeBg: "#17202E",
         lightDark: "#17202e",
         darkHead: "#1B2533"
       },

@@ -1,20 +1,13 @@
-import { CardWithTitle, SimpleCard } from "@shared/ui/components";
-import { BaseLayout } from "@shared/ui";
 import { DataContext } from "@app/context";
 import { useInitData } from "@app/hooks";
+import { CharacterOfTheDay } from "@pages/CharacterOfTheDay";
 
 function App() {
   const data = useInitData();
 
   return (
     <DataContext.Provider value={data}>
-      <BaseLayout>
-        <div className="my-10 w-48">
-          <CardWithTitle title="starship">mdfkmg</CardWithTitle>
-        </div>
-
-        <SimpleCard>simple</SimpleCard>
-      </BaseLayout>
+      <CharacterOfTheDay />
     </DataContext.Provider>
   );
 }
