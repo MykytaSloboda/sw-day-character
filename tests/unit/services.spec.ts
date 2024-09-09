@@ -1,5 +1,5 @@
 import { describe, expect, test, beforeEach, vi, afterEach } from "vitest";
-import { getFromLocalStorage, setToLocalStorage, getFetchedData } from "../../src/app/services";
+import { getFromLocalStorage, setToLocalStorage, getFetchedData, getFetchedDataFromArray } from "../../src/app/services";
 
 // Мок fetch
 global.fetch = vi.fn();
@@ -78,5 +78,38 @@ describe('getFetchedData', () => {
     const invalidUrl = '    ';
     
     await expect(getFetchedData(invalidUrl)).rejects.toThrow();
+  });
+});
+
+describe('getFetchedDataFromArray', () => {
+  const mockDataArray = [{ key1: 'value1' }, { key2: 'value2' }];
+
+  beforeEach(() => {
+    // Mock global fetch function for all tests
+    vi.stubGlobal('fetch', vi.fn((url) => {
+      if (url === 'https://example.com/1') {
+        return Promise.resolve({
+          ok: true,
+          json: async () => mockDataArray[0],
+        });
+      } else if (url === 'https://example.com/2') {
+        return Promise.resolve({
+          ok: true,
+          json: async () => mockDataArray[1],
+        });
+      }
+      return Promise.reject(new Error('Fetch failed'));
+    }));
+  });
+
+  afterEach(() => {
+    vi.clearAllMocks();
+  });
+
+  test('should fetch data from multiple URLs successfully', async () => {
+    const urls = ['https://example.com/1', 'https://example.com/2'];
+    const result = await getFetchedDataFromArray(urls);
+
+    expect(result).toEqual(mockDataArray);
   });
 });

@@ -1,6 +1,6 @@
 import { EErrorMessages } from '@shared/enums';
 
-export const getFromLocalStorage = (key: string) => {
+export const getFromLocalStorage = (key: string): string | null => {
     return localStorage.getItem(key);
 };
 

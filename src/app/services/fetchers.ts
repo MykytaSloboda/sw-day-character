@@ -19,3 +19,12 @@ export const getFetchedData = async <T>(
 
   return await response.json();
 };
+
+export const getFetchedDataFromArray = async <T>(urls: string[]): Promise<T[]> => {
+  const dataArr: T[] = await Promise.all(urls.map(async (url) => {
+    const res = await getFetchedData<T>(url);
+    return res;
+  }));
+
+  return dataArr;
+}

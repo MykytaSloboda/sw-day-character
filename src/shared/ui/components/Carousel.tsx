@@ -19,7 +19,7 @@ export const CarouselComponent = ({ children }: IChildrenProps) => {
   };
 
   return (
-    <Carousel responsive={responsive}>
+    <Carousel responsive={responsive} arrows={false}>
         {children}
     </Carousel>
   );

@@ -15,4 +15,3 @@ services:
       - ./index.html:/app/index.html
       - ./tailwind.config.js:/app/tailwind.config.js
       - ./playwright.config.ts:/app/playwright.config.ts
-      - ./package.json:/app/package.json
