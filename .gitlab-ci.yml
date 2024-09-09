@@ -26,6 +26,8 @@ test:
       - test-results/
     reports:
       junit: test-results/*.xml
+    expire_in: 1 week
+    retry: 3
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
