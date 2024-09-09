@@ -13,6 +13,7 @@ export default {
         lineDark: "#374151",
         orangeBg: "#fffcf5",
         lightDark: "#17202e",
+        darkHead: "#1B2533"
       },
     },
   },

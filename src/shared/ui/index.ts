@@ -1,5 +1,5 @@
 export * from "./DarkModeToggle";
-export * from "./Header";
+export * from "./components/Header";
 export * from "./layouts";
 export * from "./components";
 export * from "./utils";
