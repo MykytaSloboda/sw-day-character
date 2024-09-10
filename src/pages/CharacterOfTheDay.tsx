@@ -3,6 +3,7 @@ import {
   FilmsSection,
   Loading,
   ProfileSection,
+  StarshipsSection,
   VehiclesSection,
 } from "@shared/ui";
 import { DataContext } from "@app/context";
@@ -38,6 +39,7 @@ export const CharacterOfTheDay = () => {
       {data?.films && <FilmsSection films={data.films} />}
 
       {data?.vehicles && <VehiclesSection vehicles={data.vehicles} />}
+      {data?.starships && <StarshipsSection starships={data.starships} />}
     </BaseLayout>
   );
 };
