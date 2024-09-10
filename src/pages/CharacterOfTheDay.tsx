@@ -1,4 +1,4 @@
-import { BaseLayout, ProfileSection } from "@shared/ui";
+import { BaseLayout, FilmsSection, ProfileSection } from "@shared/ui";
 import { DataContext } from "@app/context";
 import { useContext, useState } from "react";
 import { getFetchedData } from "@app/services";
@@ -25,6 +25,8 @@ export const CharacterOfTheDay = () => {
       {data?.character && (
         <ProfileSection character={data?.character} homeName={homeName} />
       )}
+
+      {data?.films && <FilmsSection films={data.films} />}
     </BaseLayout>
   );
 };

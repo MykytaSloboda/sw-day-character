@@ -17,7 +17,8 @@ export default {
         orangeBg: "#fffcf5",
         darkOrangeBg: "#17202E",
         lightDark: "#17202e",
-        darkHead: "#1B2533"
+        darkHead: "#1B2533",
+        customGold: '#f79009'
       },
     },
   },
