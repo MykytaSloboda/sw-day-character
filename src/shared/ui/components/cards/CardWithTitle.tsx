@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const CardWithTitle = ({ children, title = "" }: IProps) => (
-  <div className="border border-line dark:border-lineDark rounded-lg">
+  <div className="m-1 border border-line dark:border-lineDark rounded-lg">
     <div className="w-full border-b border-line rounded-lg dark:border-lineDark bg-lightBg dark:bg-darkHead p-5 flex items-center gap-2">
       <img src={stackIcon} alt="stack" />
       <span className="font-medium text-darkText dark:text-white text-base">

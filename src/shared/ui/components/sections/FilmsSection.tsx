@@ -6,14 +6,14 @@ interface IProps {
   films: IFilm[];
 }
 
-export const FilmsSection = ({ films }: IProps) => (
+export const FilmsSection = ({ films }: IProps) => films.length > 0 &&(
   <section className="">
     <div className="container">
       <MainHeading title="films" />
 
       <CarouselComponent>
         {films.map(({ release_date, title, opening_crawl }) => (
-          <SimpleCard>
+          <SimpleCard key={title}>
             <div className="flex flex-col gap-8">
               <div className="text-customGold">
                 <span>{release_date}</span>
