@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export const FilmsSection = ({ films }: IProps) => films.length > 0 &&(
-  <section className="">
+  <section className="pb-10">
     <div className="container">
       <MainHeading title="films" />
 
