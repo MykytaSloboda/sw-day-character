@@ -27,7 +27,7 @@ For the solution was used a stack of technologies that are listed below:
 - [Playwright](https://playwright.dev/docs/intro)
 
 ### 🏭 DevOPS
-- [Github actions](https://docs.github.com/en/actions/writing-workflows/quickstart)
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 - [Docker](https://www.docker.com/get-started/)
 
 ## 🛠️ Project installation and start

@@ -1,11 +1,17 @@
 services:
   web:
-    container_name: 'sw-day-character'
+    container_name: 'hvv-tender-frontend'
     image: sampleproject
     build:
       context: .
       dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
     ports:
-      - 3000:3000
+      - 5000:5000
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./vite.config.ts:/app/vite.config.ts
+      - ./public:/app/public
+      - ./index.html:/app/index.html
+      - ./tailwind.config.js:/app/tailwind.config.js
+      - ./playwright.config.ts:/app/playwright.config.ts
